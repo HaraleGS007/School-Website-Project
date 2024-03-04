@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function validatebasic() {
+            var name = document.myform.name.value;
+            var eual = document.myform.eual.value;
+            var number = document.myform.number.value;
+
+            if (name == "" || name.lenght < 2) {
+                console.log("Nmae requed...")
+                alert("Name requied..");
+                return false;
+            }
+
+            if (eual == "") {
+                alert("Qulification Require..");
+                return false;
+            }
+
+            if (number == "") {
+                alert("Mobail number reuired...")
+                return false;
+            }
+        }
+
+    </script>
+
+    <form name="myform" action="#" onsubmit="return validatebasic()">
+        Name: <input type="text" name="name">
+        <br>
+        Qualification: <input type="text" name="eual">
+        <br>
+        Number: <input type="text" name="number">
+        <br>
+        <input type="submit" value=" Submit">
+
+        <p id="d1"></p>
+
+    </form>
+</body>
+
+</html>
